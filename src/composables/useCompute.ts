@@ -1,4 +1,3 @@
-import { WebGLRenderer } from "three";
 import * as THREE from "three";
 export function useCompute(
   gl: THREE.WebGLRenderer,

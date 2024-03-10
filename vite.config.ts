@@ -9,6 +9,7 @@ export default defineConfig({
       ...templateCompilerOptions,
     }),
   ],
+  base: "/07-Slime-Simulation",
   server: {
     hmr: false,
   },

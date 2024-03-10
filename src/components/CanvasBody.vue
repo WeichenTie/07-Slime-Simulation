@@ -50,10 +50,9 @@ function generatePositionsAndVelocities(size: number) {
 function generateColors(size: number) {
   const buffer = new Array(size * size * 4);
   for (let i = 0; i < size * size * 4; i += 4) {
-    const random = Math.random();
-    buffer[i] = 1; //random <= 0.3333;
-    buffer[i + 1] = 1; //random > 0.3333 && random <= 0.66667;
-    buffer[i + 2] = 1; //random > 0.66667;
+    buffer[i] = 1;
+    buffer[i + 1] = 1;
+    buffer[i + 2] = 1;
     buffer[i + 3] = 1;
   }
   return new Float32Array(buffer);
@@ -305,7 +304,6 @@ const diffuseShader = new THREE.ShaderMaterial({
 
       float strength = length(blur.xyz);
       fColor = vec4(blur.xyz * float(strength > 0.0005),1) * (1.0-uDiffusionStrength*0.1);
-      // fColor = vec4(uv,0,1);
   }
   `,
 });
